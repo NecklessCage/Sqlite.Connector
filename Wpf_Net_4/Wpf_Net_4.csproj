@@ -121,6 +121,10 @@
     <Resource Include="Resources\Entypo-license.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Sql.Query\Sql.Query.csproj">
+      <Project>{db8b969b-46f9-43f9-9c0b-0c679e90ad36}</Project>
+      <Name>Sql.Query</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sqlite.Connector\Sqlite.Connector.csproj">
       <Project>{7d5741ae-44df-4254-9059-b32d207d6fac}</Project>
       <Name>Sqlite.Connector</Name>
