@@ -7,8 +7,8 @@
     <ProjectGuid>{DB8B969B-46F9-43F9-9C0B-0C679E90AD36}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sql.Query</RootNamespace>
-    <AssemblyName>Sql.Query</AssemblyName>
+    <RootNamespace>Sql.QueryBuilder</RootNamespace>
+    <AssemblyName>Sql.QueryBuilder</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,10 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builder.cs" />
-    <Compile Include="IQueryBuilder.cs" />
+    <Compile Include="BinaryOperator.cs" />
     <Compile Include="KeyWord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Select.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

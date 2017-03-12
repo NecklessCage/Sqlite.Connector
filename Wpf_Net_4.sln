@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf_Net_4", "Wpf_Net_4\Wpf_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sqlite.Connector", "Sqlite.Connector\Sqlite.Connector.csproj", "{7D5741AE-44DF-4254-9059-B32D207D6FAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sql.Query", "Sql.Query\Sql.Query.csproj", "{DB8B969B-46F9-43F9-9C0B-0C679E90AD36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sql.QueryBuilder", "Sql.Query\Sql.QueryBuilder.csproj", "{DB8B969B-46F9-43F9-9C0B-0C679E90AD36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
