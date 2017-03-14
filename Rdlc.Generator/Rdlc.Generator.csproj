@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8536BA7F-40C9-450E-A5BE-82825D03CF10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rdlc.Generator</RootNamespace>
+    <AssemblyName>Rdlc.Generator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackgroundImage.cs" />
+    <Compile Include="BackgroundRepeat.cs" />
+    <Compile Include="Body.cs" />
+    <Compile Include="Border.cs" />
+    <Compile Include="BorderStyle.cs" />
+    <Compile Include="BottomBorder.cs" />
+    <Compile Include="CellContents.cs" />
+    <Compile Include="CollectionOf.cs" />
+    <Compile Include="DataSet.cs" />
+    <Compile Include="DataSets.cs" />
+    <Compile Include="DataSources.cs" />
+    <Compile Include="EmbeddedImage.cs" />
+    <Compile Include="EmbeddedImages.cs" />
+    <Compile Include="Expression.cs" />
+    <Compile Include="FontWeight.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="GroupExpression.cs" />
+    <Compile Include="GroupExpressions.cs" />
+    <Compile Include="IElement.cs" />
+    <Compile Include="Inch.cs" />
+    <Compile Include="LeftBorder.cs" />
+    <Compile Include="MarkupType.cs" />
+    <Compile Include="Page.cs" />
+    <Compile Include="Paragraph.cs" />
+    <Compile Include="Paragraphs.cs" />
+    <Compile Include="ParentOf.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RdlColor.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="ReportItem.cs" />
+    <Compile Include="ReportItems.cs" />
+    <Compile Include="ReportItemsContainer.cs" />
+    <Compile Include="ReportSection.cs" />
+    <Compile Include="ReportSections.cs" />
+    <Compile Include="RightBorder.cs" />
+    <Compile Include="SortExpression.cs" />
+    <Compile Include="SortExpressions.cs" />
+    <Compile Include="Source.cs" />
+    <Compile Include="Style.cs" />
+    <Compile Include="Tablix.cs" />
+    <Compile Include="TablixBody.cs" />
+    <Compile Include="TablixCell.cs" />
+    <Compile Include="TablixCells.cs" />
+    <Compile Include="TablixColumn.cs" />
+    <Compile Include="TablixColumnHierarchy.cs" />
+    <Compile Include="TablixColumns.cs" />
+    <Compile Include="TablixCorner.cs" />
+    <Compile Include="TablixCornerCell.cs" />
+    <Compile Include="TablixCornerRow.cs" />
+    <Compile Include="TablixCornerRows.cs" />
+    <Compile Include="TablixHeader.cs" />
+    <Compile Include="TablixMember.cs" />
+    <Compile Include="TablixMembers.cs" />
+    <Compile Include="TablixRow.cs" />
+    <Compile Include="TablixRowHierarchy.cs" />
+    <Compile Include="TablixRows.cs" />
+    <Compile Include="TextAlign.cs" />
+    <Compile Include="Textbox.cs" />
+    <Compile Include="TextboxStyle.cs" />
+    <Compile Include="TextRun.cs" />
+    <Compile Include="TextRuns.cs" />
+    <Compile Include="TopBorder.cs" />
+    <Compile Include="TypeExtension.cs" />
+    <Compile Include="Value.cs" />
+    <Compile Include="VerticalAlign.cs" />
+    <Compile Include="Width.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

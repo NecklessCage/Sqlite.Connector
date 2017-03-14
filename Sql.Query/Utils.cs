@@ -12,11 +12,13 @@ namespace Sql.QueryBuilder
             , { BinaryOperator.NotEqual, "<>" }
             , { BinaryOperator.LessThanOrEqual, "<=" }
             , { BinaryOperator.GreaterThanOrEqual, ">=" }
+            , { BinaryOperator.Like, " LIKE " }
         };
 
-        public static string BinaryCompare(string columnName, string value, BinaryOperator op)
+        public static string BinaryCompare(string columnName, BinaryOperator op, string value)
         {
-            return string.Concat("(", columnName, OperatorMapper[op], "'", value, "')");
+            //return string.Concat("(", columnName, OperatorMapper[op], "'", value, "')");
+            return string.Concat(columnName, OperatorMapper[op], "'", value, "'");
         }
     }
 }

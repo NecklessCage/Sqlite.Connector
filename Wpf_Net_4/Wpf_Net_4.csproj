@@ -36,12 +36,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MahApps.Metro, Version=1.4.3.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.4.3\lib\net40\MahApps.Metro.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.4.3\lib\net40\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -57,12 +60,20 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Hola\MainTable.cs" />
+    <Compile Include="Hola\ReportGenerator.cs" />
+    <Compile Include="Hola\SuperPoco.cs" />
+    <Compile Include="Hola\User.cs" />
+    <Compile Include="WindowRdlc.xaml.cs">
+      <DependentUpon>WindowRdlc.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -82,6 +93,10 @@
     <Page Include="Resources\IconsNonShared.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WindowRdlc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +132,14 @@
     <Resource Include="Resources\Entypo-license.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Query.Builder\Query.Builder.fsproj">
+      <Project>{dab0734c-d56d-439b-88e5-e1479a176b38}</Project>
+      <Name>Query.Builder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rdlc.Generator\Rdlc.Generator.csproj">
+      <Project>{8536ba7f-40c9-450e-a5be-82825d03cf10}</Project>
+      <Name>Rdlc.Generator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sql.Query\Sql.QueryBuilder.csproj">
       <Project>{db8b969b-46f9-43f9-9c0b-0c679e90ad36}</Project>
       <Name>Sql.QueryBuilder</Name>
@@ -124,6 +147,10 @@
     <ProjectReference Include="..\Sqlite.Connector\Sqlite.Connector.csproj">
       <Project>{7d5741ae-44df-4254-9059-b32d207d6fac}</Project>
       <Name>Sqlite.Connector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xtensions\Xtensions.csproj">
+      <Project>{47d6f00c-12c0-4298-8848-14935a491f09}</Project>
+      <Name>Xtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

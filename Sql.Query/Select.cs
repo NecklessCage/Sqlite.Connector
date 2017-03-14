@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Text;
+
+using Xtensions;
 
 namespace Sql.QueryBuilder
 {
@@ -11,84 +11,70 @@ namespace Sql.QueryBuilder
         // The bool must be true before the bool below can be executed + set true
         private bool _columnNamesReady = false;
         private bool _tableNameReady = false;
+        private bool _whereReady = false;
         private bool _isReady = false;
         #endregion
 
         private readonly StringBuilder _builder = new StringBuilder(KeyWord.SELECT);
 
+        public Select(bool withWhere = false, params string[] columnNames)
+        {
+            _whereReady = !withWhere;
+            Columns(columnNames);
+        }
+
         /// <summary>
-        /// This method does not require any preconditions.
+        /// This method requires that column names are not yet set.
         /// </summary>
         /// <param name="columnNames">Columns to be fetched.</param>
-        public bool Columns(params string[] columnNames)
+        private void Columns(params string[] columnNames)
         {
             /*  The query string at this point should be
                 "SELECT"
                 Add a space before adding column names. */
-            if (!_columnNamesReady)
-            {
-                _builder.Append(KeyWord.SPACE);
-                foreach (var col in columnNames)
-                {
-                    _builder.Append(string.Concat(col, KeyWord.COMMA));
-                }
-                // Remove the last extra comma.
-                _builder.Length--;
-                _columnNamesReady = true;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            #region Precondition(s)
+            (!_columnNamesReady).Assert("Column name(s) has been set, and cannot be set more than once.");
+            #endregion
+
+            _builder.Append(columnNames.Aggregate((res, next) => res + "," + next));
+            _columnNamesReady = true;
         }
 
-        public bool Table(string tableName)
+        /// <summary>
+        /// This method requires that column names are added first and that table is not yet set.
+        /// </summary>
+        /// <param name="tableName">Name of the table to select from.</param>
+        public Select From(string tableName)
         {
-            if (_columnNamesReady && !_tableNameReady)
-            {
-                _builder.Append(string.Concat(KeyWord.SPACE, KeyWord.FROM, KeyWord.SPACE, tableName));
-                _tableNameReady = true;
-                _isReady = true;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            #region Preconditions
+            _columnNamesReady.Assert("Columns must be set before setting the table in the query.");
+            (!_tableNameReady).Assert("Table name has been set, and cannot be set more than once.");
+            #endregion
+
+            _builder.Append(KeyWord.FROM + tableName);
+            _tableNameReady = true;
+            _isReady = _whereReady;
+            return this;
         }
 
-        public bool WhereConjunction(params string[] criteria)
+        public Select Where(Logic l, params string[] criteria)
         {
-            if (_tableNameReady)
-            {
-                _builder.Append(string.Concat(KeyWord.SPACE, KeyWord.WHERE));
-                foreach (var cri in criteria)
-                {
-                    _builder.Append(string.Concat(KeyWord.SPACE, cri, KeyWord.SPACE, KeyWord.AND));
-                }
-                _builder.Length -= (KeyWord.SPACE.Length + KeyWord.AND.Length);
-                _isReady = true;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            #region Precondition(s)
+            _tableNameReady.Assert("Table must be set before setting where clause in the query.");
+            #endregion
+
+            _builder.Append(KeyWord.WHERE + criteria.Aggregate((res, next) => res + l.ToString() + next));
+            _isReady = true;
+            return this;
         }
 
-        public bool Query(out string query)
+        public string Query()
         {
-            if (_isReady)
-            {
-                query = _builder.ToString();
-                return true;
-            }
-            else
-            {
-                query = "";
-                return false;
-            }
+            #region Precondition(s)
+            _isReady.Assert("Query is not ready for execution.");
+            #endregion
+
+            return _builder.ToString();
         }
     }
 }

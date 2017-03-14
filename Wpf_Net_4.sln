@@ -9,6 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sqlite.Connector", "Sqlite.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sql.QueryBuilder", "Sql.Query\Sql.QueryBuilder.csproj", "{DB8B969B-46F9-43F9-9C0B-0C679E90AD36}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sqlite.Connect", "Sqlite.Connect\Sqlite.Connect.fsproj", "{984F9C4D-BB6B-44C7-B5CD-22C95ED60ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rdlc.Generator", "Rdlc.Generator\Rdlc.Generator.csproj", "{8536BA7F-40C9-450E-A5BE-82825D03CF10}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Query.Builder", "Query.Builder\Query.Builder.fsproj", "{DAB0734C-D56D-439B-88E5-E1479A176B38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xtensions", "Xtensions\Xtensions.csproj", "{47D6F00C-12C0-4298-8848-14935A491F09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +35,22 @@ Global
 		{DB8B969B-46F9-43F9-9C0B-0C679E90AD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB8B969B-46F9-43F9-9C0B-0C679E90AD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB8B969B-46F9-43F9-9C0B-0C679E90AD36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984F9C4D-BB6B-44C7-B5CD-22C95ED60ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984F9C4D-BB6B-44C7-B5CD-22C95ED60ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984F9C4D-BB6B-44C7-B5CD-22C95ED60ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984F9C4D-BB6B-44C7-B5CD-22C95ED60ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8536BA7F-40C9-450E-A5BE-82825D03CF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8536BA7F-40C9-450E-A5BE-82825D03CF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8536BA7F-40C9-450E-A5BE-82825D03CF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8536BA7F-40C9-450E-A5BE-82825D03CF10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAB0734C-D56D-439B-88E5-E1479A176B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB0734C-D56D-439B-88E5-E1479A176B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB0734C-D56D-439B-88E5-E1479A176B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB0734C-D56D-439B-88E5-E1479A176B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D6F00C-12C0-4298-8848-14935A491F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D6F00C-12C0-4298-8848-14935A491F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D6F00C-12C0-4298-8848-14935A491F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D6F00C-12C0-4298-8848-14935A491F09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

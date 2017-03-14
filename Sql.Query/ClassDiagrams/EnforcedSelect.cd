@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sql.QueryBuilder.Enforced.Select">
+    <Position X="1.25" Y="0.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Sql.QueryBuilder.Enforced.Select.ColumnsReady">
+        <Compartments>
+          <Compartment Name="Fields" Collapsed="true" />
+          <Compartment Name="Nested Types" Collapsed="false" />
+        </Compartments>
+        <NestedTypes>
+          <Class Name="Sql.QueryBuilder.Enforced.Select.ColumnsReady.TableReady">
+            <Compartments>
+              <Compartment Name="Fields" Collapsed="true" />
+              <Compartment Name="Properties" Collapsed="true" />
+              <Compartment Name="Methods" Collapsed="true" />
+              <Compartment Name="Nested Types" Collapsed="false" />
+            </Compartments>
+            <NestedTypes>
+              <Class Name="Sql.QueryBuilder.Enforced.Select.ColumnsReady.TableReady.InnerJoiner">
+                <Compartments>
+                  <Compartment Name="Fields" Collapsed="true" />
+                  <Compartment Name="Methods" Collapsed="true" />
+                </Compartments>
+                <TypeIdentifier>
+                  <NewMemberFileName>Enforced.cs</NewMemberFileName>
+                </TypeIdentifier>
+              </Class>
+              <Class Name="Sql.QueryBuilder.Enforced.Select.ColumnsReady.TableReady.WhereReady">
+                <Compartments>
+                  <Compartment Name="Fields" Collapsed="true" />
+                  <Compartment Name="Properties" Collapsed="true" />
+                  <Compartment Name="Methods" Collapsed="true" />
+                  <Compartment Name="Nested Types" Collapsed="false" />
+                </Compartments>
+                <NestedTypes>
+                  <Class Name="Sql.QueryBuilder.Enforced.Select.ColumnsReady.TableReady.WhereReady.GroupByReady">
+                    <Compartments>
+                      <Compartment Name="Fields" Collapsed="true" />
+                      <Compartment Name="Properties" Collapsed="true" />
+                      <Compartment Name="Methods" Collapsed="true" />
+                      <Compartment Name="Nested Types" Collapsed="false" />
+                    </Compartments>
+                    <NestedTypes>
+                      <Class Name="Sql.QueryBuilder.Enforced.Select.ColumnsReady.TableReady.WhereReady.GroupByReady.OrderByReady">
+                        <Compartments>
+                          <Compartment Name="Fields" Collapsed="true" />
+                          <Compartment Name="Properties" Collapsed="true" />
+                          <Compartment Name="Methods" Collapsed="true" />
+                        </Compartments>
+                        <TypeIdentifier>
+                          <NewMemberFileName>Enforced.cs</NewMemberFileName>
+                        </TypeIdentifier>
+                      </Class>
+                    </NestedTypes>
+                    <TypeIdentifier>
+                      <NewMemberFileName>Enforced.cs</NewMemberFileName>
+                    </TypeIdentifier>
+                  </Class>
+                </NestedTypes>
+                <TypeIdentifier>
+                  <NewMemberFileName>Enforced.cs</NewMemberFileName>
+                </TypeIdentifier>
+              </Class>
+            </NestedTypes>
+            <TypeIdentifier>
+              <NewMemberFileName>Enforced.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>Enforced.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Enforced.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Zawgyi-One" Size="8.25" />
+</ClassDiagram>
