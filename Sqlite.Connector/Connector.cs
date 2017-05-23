@@ -5,7 +5,6 @@ using System.Data.SQLite;
 /// Htet Aung
 /// March 12, 2017
 /// Sqlite database connection class with all generic query executors.
-/// I made changes for git.
 /// </summary>
 
 namespace Sqlite.Connector
